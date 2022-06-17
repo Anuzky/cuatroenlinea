@@ -1,3 +1,10 @@
+## Tabla de contenidos
+
+* [Información general](#informacion-general)
+* [Requerimientos](#requerimientos)
+* [Instalación y preparación](#instalacion-y-preparacion)
+* [Cómo jugar](#como-jugar)
+
 ## Información general
 
   ### ¿De qué se trata?
