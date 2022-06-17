@@ -1,64 +1,39 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+## Información general
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+  ### ¿De qué se trata?
 
-## About Laravel
+  **Cuatro en línea** es un proyecto de la materia Adaptación al Ambiente de Trabajo. Consiste en el clásico juego de cuatro en línea en el que dos jugadores compiten para ver quién es el primero en hacer una línea de cuatro "fichas" ininterrumpida.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+  ### Tecnologías
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+  Está desarrollado en los lenguajes PHP y Blade, utilizando el framework de Laravel.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+  ### Objetivo
 
-## Learning Laravel
+  El objetivo del proyecto es ir mejorando las funciones del juego hasta llegar a un resultado satisfactorio y único, partiendo de la base establecida por la cátedra.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Requerimientos
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+  DDEV es una herramienta de software libre que facilita la puesta en marcha de entornos de desarrollo PHP.
 
-## Laravel Sponsors
+  Para levantar el proyecto, se recomienda instalar DDEV. Si nunca ha trabajado con este software, tenga en cuenta que deberá instalar también una plataforma que maneje contenedores virtualizados. Siga las instrucciones de instalación detalladas en [esta página](https://ddev.readthedocs.io/) correspondientes a su sistema operativo.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Instalación y preparación
 
-### Premium Partners
+  Habiendo clonado/descargado los archivos del proyecto, siga los siguientes pasos en la consola para ponerlo en marcha y funcionando.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+  1. Diríjase al directorio raíz o carpeta del proyecto (`cuatroenlinea`).
 
-## Contributing
+  2. Configure el proyecto con `ddev config`. Se le preguntarán el nombre del proyecto, la ubicación del directorio raíz del proyecto y el tipo de proyecto. No es necesario ingresar nada, la configuración será detectada.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+  3. Es necesario instalar Composer, un sistema de gestión de paquetes, para incorporar las dependencias y librerías requeridas. Instálelo ingresando: `ddev composer install`.
 
-## Code of Conduct
+  4. Para que funcione la aplicación, se requiere el archivo de configuración `.env`. El proyecto ya trae esta configuración en el archivo `.env.example`. Para aplicar esta configuración, copie el archivo `.env.example` en el mismo directorio, cambiándole el nombre a `.env`.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+  5. Por último, va a necesitar crear una llave de aplicación para la seguridad de la sesión. Ingrese `ddev php artisan key:generate` para generarla.
 
-## Security Vulnerabilities
+  6. La aplicación está lista y funcionando. Ingrese `ddev launch` para abrirla en el navegador o utilice el URL proporcionado cuando se ingresó `ddev start`. Luego de haber configurado todo, lo único que necesitará hacer para levantar el proyecto será `ddev start`. Para parar el proyecto, ingrese `ddev stop`. 
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Cómo jugar
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+  Por ahora, para acceder al juego, añada `/jugar/#` al final del URL en el navegador, reemplazando el `#` por cualquier número del 1 al 7 (representan las columnas del juego). Podrá ver el tablero de juego y, para ingresar fichas sólo deberá clickear arriba de la columna deseada. El turno del jugador será indicado por el color del círculo que aparece al pasar el cursor por encima, que coincidirá con el color de las fichas ya colocadas.
