@@ -1,9 +1,9 @@
 ## Tabla de contenidos
 
-* [Información general](#informacion-general)
+* [Información general](#información-general)
 * [Requerimientos](#requerimientos)
-* [Instalación y preparación](#instalacion-y-preparacion)
-* [Cómo jugar](#como-jugar)
+* [Instalación y preparación](#instalación-y-preparación)
+* [Cómo jugar](#cómo-jugar)
 
 ## Información general
 
