@@ -1,0 +1,22 @@
+# Integración Continua
+
+name: CI
+
+on: [push]
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Instalar composer
+      - run: composer install -n --prefer-dist
+
+      - name: Crear .env y la key
+      - run: cp .env.example .env 
+             php artisan key:generate
+             
+      - name: Correr pruebas
+        run: ./vendor/bin/phpunit
