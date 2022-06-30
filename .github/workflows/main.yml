@@ -15,7 +15,7 @@ jobs:
         run: composer install -n --prefer-dist
 
       - name: Crear .env y la key
-        run: cp .env.example .env 
+        run: cp .env.example .env |
              php artisan key:generate
              
       - name: Correr pruebas
