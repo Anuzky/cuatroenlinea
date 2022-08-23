@@ -6,14 +6,14 @@ class GameBoard {
   protected $empty = True;
   protected $contents = [];
 
-  function __construct() {
+  public function __construct() {
   }
 
-  function isEmpty() {
+  public function isEmpty() {
     return $empty;
   }
 
-  function addToken(GameToken $token, $column) {
+  public function addToken(GameToken $token, $column) {
     array_push($this->contents[$column], $token);
   }
 }
