@@ -15,5 +15,11 @@ class GameBoard {
 
   public function addToken(GameToken $token, $column) {
     array_push($this->contents[$column], $token);
+    this->$empty = False;
+  }
+
+  public function clearUp() {
+    this->$contents = [];
+    this->$empty = True;
   }
 }
