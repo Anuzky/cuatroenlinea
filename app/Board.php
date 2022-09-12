@@ -36,4 +36,8 @@ class Board
       print("\n");
     }
   }
+
+  public function boardContents() {
+    return $this->contents;
+  }
 }
