@@ -1,5 +1,5 @@
 <?php
-
+namespace App;
 // Tablero del juego
 
 class GameBoard {

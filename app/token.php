@@ -1,5 +1,5 @@
 <?php
-
+namespace App;
 // Fichas del juego
 
 class GameToken {
