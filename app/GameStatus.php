@@ -8,11 +8,8 @@ class GameStatus
     
     return $this->hasVerticalLine($contents)
     || $this->hasHorizontalLine($contents)
-    || $this->hasDiagonalLine($contents);
-  }
-
-  public function printWinningLine(Board $board) {
-
+    || $this->hasDescDiagonalLine($contents)
+    || $this->hasAscDiagonalLine($contents);
   }
 
   protected function hasVerticalLine($contents) {
@@ -45,13 +42,25 @@ class GameStatus
     }
   }
 
-  protected function hasDiagonalLine($contents) {
+  protected function hasDescDiagonalLine($contents) {
     for ($row = 5; $row >= 3; $row--) {
       for ($col = 1; $col <= 4; $col++) {
         if ($contents[$col][$row] != '')
           if ($contents[$col][$row] == $contents[$col+1][$row-1]
             && $contents[$col+1][$row-1] == $contents[$col+2][$row-2]
             && $contents[$col+2][$row-2] == $contents[$col+3][$row-3])
+            return true;
+      }
+    }
+  }
+
+  protected function hasAscDiagonalLine($contents) {
+    for ($row = 5; $row >= 3; $row--) {
+      for ($col = 7; $col >= 4; $col--) {
+        if ($contents[$col][$row] != '')
+          if ($contents[$col][$row] == $contents[$col-1][$row-1]
+            && $contents[$col-1][$row-1] == $contents[$col-2][$row-2]
+            && $contents[$col-2][$row-2] == $contents[$col-3][$row-3])
             return true;
       }
     }

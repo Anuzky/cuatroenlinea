@@ -22,16 +22,19 @@ class Game
     $this->current_color = "Red";
     $this->current_player = "1";
     $game_status = new GameStatus();
+    $printer = new BoardPrinter();
 
     while ($game_status->gameEnded($board) == false) {
-      //$pos = 0;
       print("Jugador {$this->current_player}, tu turno. Ingresa una columna: ");
       fscanf(STDIN, "%d", $pos);
       $board->addToken(new Token($this->current_color), $pos);
 
-      $board->printBoard();
+      $printer->printBoard($board);
 
       $this->nextTurn();
     }
+    
+    $this->nextTurn();
+    print("Felicitaciones, ha ganado el jugador {$this->current_player}!");
   }
 }

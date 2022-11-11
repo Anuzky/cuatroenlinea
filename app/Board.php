@@ -25,19 +25,11 @@ class Board
     $this->contents[$col][6]++;
   }
 
-  public function printBoard() {
-    for ($row = 5; $row >= 0; $row--) {
-      for ($col = 1; $col <=7; $col++) {
-        if ($this->contents[$col][$row])
-          $this->contents[$col][$row]->printToken();
-        else
-          print('0 ');
-      }
-      print("\n");
-    }
-  }
-
   public function boardContents() {
     return $this->contents;
+  }
+
+  public function boardToken(int $col, int $row) {
+    return $this->contents[$col][$row];
   }
 }
